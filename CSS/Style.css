@@ -8,7 +8,8 @@
 
 body{
     height: 300ch;
-   background-image: linear-gradient(180deg, black, 180deg, black,#940404);
+    background-image: linear-gradient(180deg, black,#940404);
+
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 * {
@@ -105,4 +106,30 @@ body{
 
     
   }
-  
+  .bg{
+    margin-top: 136px;
+  }
+  .about{
+ 
+    position: absolute;
+    bottom: -650px;
+    left: 100px;
+
+    background-image: url('Images\Vantage.png');
+    color: white;
+    
+  }
+  .about h1{
+    padding: 0px;
+  }
+  .about h2{
+    padding: 20px;
+  }
+  .about p{
+    font-size: 2.5ch;
+    padding-bottom: 20px;
+  }
+
+  .credit{
+    font-size: 1ch;
+  }
