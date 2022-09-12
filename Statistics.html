@@ -4,29 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DataVisualisation</title>
     <link rel="stylesheet" href="CSS/Normalize.css" />
     <link rel="stylesheet" href="CSS/stats.css" />
+
+
+    <script src="dropdown.js"></script>
   </head>
-  <body>     
-    <nav>   
-    <section id="home">
-          <ul role="navigation">
-          <h1  aria-label="Statistics of Most Recent ALGS">Statistics of Most Recent ALGS</h1>
-    <a href="index.html" class="cta">
-    <span>Homepage</span>
-    <svg width="13px" height="10px" viewBox="0 0 13 10">
-    <path d="M1,5 L11,5"></path>
-    <polyline points="8 1 12 5 8 9"></polyline>
-  </svg>
-</a>
-</section>
-</nav>
+  <body>
+    <div class="heading">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Menu</button>
+        <div id="myDropdown" class="dropdown-content">
+          <section id="home">
+            <a href="index.html" class="nav-links">Home</a>
 
-<div class="CompStats">
-  <img src="Images/CompStats.png" width="500" height="800" alt="">
-</div>
+            <a href="Results.html" class="nav-links">Results</a>
 
+            <a href="Statistics.html" class="nav-links">Data</a>
 
-</body>
+            <a href="blogs.html" class="nav-links">Blogs</a>
+
+            <a href="styleyGuid.html" class="nav-links">Style Guide</a>
+          </section>
+        </div>
+      </div>
+      <div class="link"> <p>Go to:</p><a href="graph2.html" class="nav-links">Olympus</a></div>
+      <h1>Data Visualization</h1>
+    </div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+   
+      .rect:hover { opacity: 0.5; }
+    </style>
+  </head>
+  <body>       
+    <div class="cont" style="text-align: center;">
+      <h1>Most Picked Legends on the map Stormpoint</h1>
+      <div id="d3-container" >
+ 
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+   
+   <div class=" info">
+    <h1>Legends</h1>
+    <p>This graph portrays the most to least picked Legend during the 2021-2022 champions circuit. Looking at both charts there is a recurring legend, Valkyrie. </p>
+      <p>She is one of the more unbalanced/stronger characters in terms of how many abilities she has.</p>
+   </div>
+
+  </body>
 </html>

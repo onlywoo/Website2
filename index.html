@@ -8,42 +8,53 @@
     <meta name="description" content="Apex Legends Global Series Informatino" />
     <link rel="stylesheet" href="CSS/Normalize.css" />
     <link rel="stylesheet" href="CSS/Style.css" />
+
+    <script src="dropdown.js"></script>
     <title>Apex Legend Global Series</title>
   </head>
   <body>
-    <nav class="navbar">
-      <span class="navbar-toggle" id="js-navbar-toggle">
-        <i class="fas fa-bars"></i>
-      </span>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+          
+        <a href="index.html" class="nav-links">Home</a>
 
-      <ul class="main-nav" id="js-menu">
-        <li>
-          <a href="Results.html" class="nav-links">Results</a>
-        </li>
-        <li>
-          <a href="OFRules.html" class="nav-links">Official Rules</a>
-        </li>
-        <li>
-          <a href="Statistics.html" class="nav-links">Statistics</a>
-        </li>
-        <li>
-          <a href="styleyGuid.html" class="nav-links">Style Guide</a>
-        </li>
-        <li>
-          <a href="blogs.html" class="nav-links">Blogs</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="Apexlogo">
-      <img
-        src="Images/Logo.png"
-        width="550px"
-        height="550px"
-        alt="Apex Legends Logo"
-      />
+        <a href="Results.html" class="nav-links">Results</a>
+ 
+        <a href="Statistics.html" class="nav-links">Data</a>
+  
+        <a href="blogs.html" class="nav-links">Blogs</a>
+  
+        <a href="styleyGuid.html" class="nav-links">Style Guide</a>
+      </div>
     </div>
+
+    
+    <div class="esports">
+      <p>
+        Welcome to Apex Legends Esports. Here you will find statistics and data
+        on the Apex Legends Global Series 2022 circuit. Here you will find
+        information about the comps used as well as the most used legends along
+        with the results and patterns found within these matches played. Before
+        we continue, learn more about the game here!
+      </p>
+
+      <div class="Apexlogo">
+        <img
+          src="Images/Logo.png"
+          width="550px"
+          height="550px"
+          alt="Apex Legends Logo"
+        />
+      </div>
+
+    </div>
+<div class="jump">
+  <a href="#newSeason"> HERE!</a>
+</div>
+
     <div class="bg">
+      <a id="newSeason"> 
       <img
         src="Images/Vantage.jpg"
         width="100%"
@@ -71,6 +82,7 @@
         <div class="credit">
           <p>Source: https://www.ea.com/games/apex-legends</p>
         </div>
+      </a>
       </div>
     </div>
   </body>

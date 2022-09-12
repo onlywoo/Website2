@@ -7,83 +7,301 @@
     <title>Document</title>
     <link rel="stylesheet" href="CSS/Normalize.css" />
     <link rel="stylesheet" href="CSS/Blogs.css" />
-    
-
   </head>
 
   <body>
-    <nav>   
-      <section id="home">
-            <ul role="navigation">
-            <h1  aria-label="All of my blogs">My Writings</h1>
-      <a href="index.html" class="cta">
-      <span>Homepage</span>
-      <svg width="13px" height="10px" viewBox="0 0 13 10">
-      <path d="M1,5 L11,5"></path>
-      <polyline points="8 1 12 5 8 9"></polyline>
-    </svg>
-  </a>
-</section>
-     </nav>
-    <p id="menu"> </p>
-    <script>src= "menu.js"</script>
-   
+    <script src="dropdown.js"></script>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <section id="home">
+          <a href="index.html" class="nav-links">Home</a>
+
+          <a href="Results.html" class="nav-links">Results</a>
+
+          <a href="Statistics.html" class="nav-links">Data</a>
+
+          <a href="blogs.html" class="nav-links">Blogs</a>
+
+          <a href="styleyGuid.html" class="nav-links">Style Guide</a>
+        </section>
+      </div>
+    </div>
+
+    <div class="heading">
+      <h1>My Writings</h1>
+    </div>
+
+    <p id="menu"></p>
+    <script>
+      src = "menu.js";
+    </script>
+
     <main>
       <div>
         <section id="ODV">
-            <div class="writings" aria-label="text about an overview of datavisualization">
-              <h1>Overview of Data Visualization</H1>
-              <p>&nbsp;</p>
-              <p><em>&ldquo;&lsquo;Data Visualization &rsquo; refers to the visual representation of statistical and other types of numeric and non-numeric data through the use of static or interactive pictures and graphics.&rdquo;</em><em> </em></p>
-              <ul>
-                  <li>(Gatto, n.d.)</li>
-              </ul>
-              <p>Data visualization has been around for centuries, dating back to the 2<sup>nd</sup> century AD. Data visualization allows for human history to come to light. With the invention of computers, data visualization has come a long way in terms of aesthetics and has developed what is known as traditional data visualization, having different forms and characteristics. These allow for the understanding of data, efficiency and effectiveness to be emphasized. (Li, 2020)</p>
-              <p>With the definition of Data visualization given, it shows that the visualization doesn&rsquo;t remove the narrative. The narrative and visuals are used in tandem to be able to further the data being presented. What is the main aim of visualization? According to Gatto, it is to &ldquo;elucidate patterns, gaps, schemes, regularities, and connections&hellip;&rdquo;, this is understandable as these are often overlooked and or difficult to make sense of when looking at raw data (data before it has been made visual). This allows for the knowledge gap to be reduced (Gatto, n.d.).</p>
-              <p>There is a number of advantages that traditional data visualization has. Li describes four of them, the first one being that it has the ability to show data at a large scale instantly. Second, elucidates patterns or &ldquo;emergent properties&rdquo; within the data allowing the viewer to form an opinion. The third one is that problems can be identified immediately when it comes to product quality control. Lastly, that data visualization lets the viewer understand any scale of data (Li, 2020). While these advantages do make information easier to be evaluated they do come with challenges, human error and human restrictions, human eyes already have difficulty registering data and being able to extract useful information, another thing is that as the data pools get bigger there need to be bigger places to display them. One issue I find with data visualization when it comes to projects that require it is that the data is often dated and not current. Real-time scalability becomes important as it allows the viewer to formulate opinions based on how the data has changed and also shows a repeating pattern if one is present. (Agrawal et al., 2015)</p>
-              <p>Aesthetics in data visualisation become important as it aids in bridging the knowledge gap. Aesthetic refers to beauty and has been proven to be important as it has the potential to make information easily understood. Aesthetics become important through colour, size, scale, positioning, typography, conveyance, and the way they are interacted with. (Cawthon and Moere, 2007). As mentioned above, human perception of traditional data makes it difficult to withdraw information (Li, 2020). Aesthetics has been proven to increase user ease of use of the entire system (Tuch et al., 2012). Aesthetic is personally important, specifically for people who have issues with concentrating and get easily overwhelmed by numerical information and walls of text, especially in children which only worsens in adulthood if not treated. The eye-catching appearance of data visuals and well-thought-out layout combats reading disorders that stem from ADHD. (De Silva et al., 2021)</p>
-              <p>With this idea of data and putting it in a visual form to make more sense of it, we need to understand what data and information are. The idea of data varied depending on the context. In this case, data is referring to raw information recorded as the result of an action and therefore has meaning in that context. Come in the form of &ldquo;&hellip;names, numbers, age, signs, characters or symbols&hellip;&rdquo;(Li, 2020). When looking at information and data, especially as someone with the aforementioned conditions, these numerical values and words have no meaning and become increasingly more difficult to interpret when the data scale increases. According to Bellinger, Castro, and Mills, the recording of data has no meaning or use if unable to be understood by humans. (Bellinger et al., 2004)</p>
-              <p><em>&ldquo;Information is data that has been given meaning by way of relational connection. This &ldquo;meaning&rdquo; can be useful but does not have to be. In computer parlance, a relational database makes for information from the data stored within it&rdquo;</em></p>
-              <p>-(Li, 2020)</p>
-              <p>As explained, data visualization is to present data in a way that is more easily understood, bridging the knowledge gap and becoming somewhat more accessible as we progress as humans. This means that data visualization comes in many forms. These different forms of data visualization all are able to represent data in the most conducive way. (Li, 2020)</p>
-              <p>Since data visualization has exists to bridge knowledge gaps and make information easily digestible and elucidate patterns, there are characteristics of data visualization that need to be present. For example, it needs to be readable, like previously stated, if data can&rsquo;t be understood or interpreted by humans it is rendered useless. Second, is recognizability. This refers to users being able to identify knowledge from previously. Thirdly and last, the visual data should be easily understood (Li, 2020). This point has been reiterated throughout this analysis. This brings an interesting conversation about accessibility.</p>
-              <p>Talking about accessibility, the conversation about human perception and data visualization is created. It&rsquo;s incredibly important, another repeated point is that without data being perceived by humans it is useless. Users are being asked to formulate an opinion based on the visuals presented. As Ward et all. have exclaimed, perception is the way the world is interpreted by us. Developing a mental image of the environment. The human brain is known to &lsquo;fill in the gaps&rsquo; where there is ambiguity using known information (Ward et al., 2011). The perceptual process is a psychological study about this. How humans perceive and keep information. That due to the brain using previously learnt information to fill in ambiguity, there is a very quick yet low-level system in humans that can make sense of visuals. This was named &ldquo;preattentive&rdquo; (&ldquo;Perception in Visualization,&rdquo; n.d.).</p>
-              <p>More with accessibility, there has been a repeated idea through the analysis of data visualization and it&rsquo;s that it to bridge the gap in knowledge. This then makes information more accessible. An article called &ldquo;Reaching Broader Audiences with Visualization&rdquo; (Lee et al., 2020) talks about this. For example, when there is about thirty-six million blind people, an obvious huge issue in terms of data visualization, people with IDDs (intellectual and developmental disabilities) are left out of the conversation. Previously it was said that data is being presented on computers, for someone who has physical disabilities might have difficulties accessing these. Knowledge is supposed to be for everyone, and the only way knowledge can expand, and grow is with the views of everyone from different backgrounds and perspectives. Credit is given where credit is due, data visualization does account for colour blindness as graphs and charts can be differentiated with patterns rather than colours. (Lee et al., 2020)</p>
-              <p>Data visualization is incredibly important in making information easily accessible and digested by the viewer. It allows for patterns which would otherwise be hidden in walls of texts and numbers to emerge. Trends become easier to spot and therefore easier for decisions and opinions to be made. The data can be presented traditionally that is something that is seen very commonly but due to human perception, aesthetics come into play. Aesthetics helps cater for people who have difficulty concentrating and get easily overwhelmed by walls of text or numbers. Data comes in many forms and being placed in visuals makes them easier to understand. Data needs to be understood by humans because without the understanding or perception, the data becomes useless, It is essentially just a list of random things. Since data needs to be taken in by humans, there are huge groups of marginalized people being left out and have no way of accessing data, progress has been made as there is some catering towards colour blind people.<em><br /></em></p>
-              <p>References</p>
-              <p>Agrawal, R., Kadadi, A., Dai, X., Andres, F., 2015. Challenges and opportunities with big data visualization, in: Proceedings of the 7th International Conference on Management of Computational and Collective IntElligence in Digital EcoSystems. ACM, Caraguatatuba Brazil, pp. 169&ndash;173. https://doi.org/10.1145/2857218.2857256</p>
-              <p>Bellinger, G., Durval Castro, Mills, A., 2004. Data, Information, Knowledge, and Wisdom.</p>
-              <p>Cawthon, N., Moere, A.V., 2007. The Effect of Aesthetic on the Usability of Data Visualization, in: 2007 11th International Conference Information Visualization (IV &rsquo;07). pp. 637&ndash;648. https://doi.org/10.1109/IV.2007.147</p>
-              <p>De Silva, S., Dayarathna, S., Ariyarathne, G., Meedeniya, D., Jayarathna, S., Michalek, A.M.P., 2021. Computational Decision Support System for ADHD Identification. Int. J. Autom. Comput. 18, 233&ndash;255. https://doi.org/10.1007/s11633-020-1252-1</p>
-              <p>Gatto, M.A.C., n.d. Making Research Useful: Current Challenges and Good Practices in Data Visualisation 56.</p>
-              <p>Lee, B., Choe, E.K., Isenberg, P., Marriott, K., Stasko, J., 2020. Reaching Broader Audiences With Data Visualization. IEEE Comput. Grap. Appl. 40, 82&ndash;90. https://doi.org/10.1109/MCG.2020.2968244</p>
-              <p>Li, Q., 2020. Embodying Data: Chinese Aesthetics, Interactive Visualization and Gaming Technologies. Springer Singapore, Singapore. https://doi.org/10.1007/978-981-15-5069-0</p>
-              <p>Perception in Visualization [WWW Document], n.d. URL https://www.csc2.ncsu.edu/faculty/healey/PP/ (accessed 8.8.22).</p>
-              <p>Tuch, A.N., Roth, S.P., Hornb&aelig;k, K., Opwis, K., Bargas-Avila, J.A., 2012. Is beautiful really usable? Toward understanding the relation between usability, aesthetics, and affect in HCI. Computers in Human Behavior 28, 1596&ndash;1607. https://doi.org/10.1016/j.chb.2012.03.024</p>
-              <p>Ward, M.O., Grinstein, G., Keim, D., 2011. Interactive Data Visualization: Foundations, Techniques, and Applications. A K Peters/CRC Press, New York. https://doi.org/10.1201/9780429108433</p>
-              <p>&nbsp;</p>
-        </div>
+          <div
+            class="writings"
+            aria-label="text about an overview of datavisualization"
+          >
+            <h1>Overview of Data Visualization</h1>
+            <p>&nbsp;</p>
+            <p>
+              <em
+                >&ldquo;&lsquo;Data Visualization &rsquo; refers to the visual
+                representation of statistical and other types of numeric and
+                non-numeric data through the use of static or interactive
+                pictures and graphics.&rdquo;</em
+              ><em> </em>
+            </p>
+            <ul>
+              <li>(Gatto, n.d.)</li>
+            </ul>
+            <p>
+              Data visualization has been around for centuries, dating back to
+              the 2<sup>nd</sup> century AD. Data visualization allows for human
+              history to come to light. With the invention of computers, data
+              visualization has come a long way in terms of aesthetics and has
+              developed what is known as traditional data visualization, having
+              different forms and characteristics. These allow for the
+              understanding of data, efficiency and effectiveness to be
+              emphasized. (Li, 2020)
+            </p>
+            <p>
+              With the definition of Data visualization given, it shows that the
+              visualization doesn&rsquo;t remove the narrative. The narrative
+              and visuals are used in tandem to be able to further the data
+              being presented. What is the main aim of visualization? According
+              to Gatto, it is to &ldquo;elucidate patterns, gaps, schemes,
+              regularities, and connections&hellip;&rdquo;, this is
+              understandable as these are often overlooked and or difficult to
+              make sense of when looking at raw data (data before it has been
+              made visual). This allows for the knowledge gap to be reduced
+              (Gatto, n.d.).
+            </p>
+            <p>
+              There is a number of advantages that traditional data
+              visualization has. Li describes four of them, the first one being
+              that it has the ability to show data at a large scale instantly.
+              Second, elucidates patterns or &ldquo;emergent properties&rdquo;
+              within the data allowing the viewer to form an opinion. The third
+              one is that problems can be identified immediately when it comes
+              to product quality control. Lastly, that data visualization lets
+              the viewer understand any scale of data (Li, 2020). While these
+              advantages do make information easier to be evaluated they do come
+              with challenges, human error and human restrictions, human eyes
+              already have difficulty registering data and being able to extract
+              useful information, another thing is that as the data pools get
+              bigger there need to be bigger places to display them. One issue I
+              find with data visualization when it comes to projects that
+              require it is that the data is often dated and not current.
+              Real-time scalability becomes important as it allows the viewer to
+              formulate opinions based on how the data has changed and also
+              shows a repeating pattern if one is present. (Agrawal et al.,
+              2015)
+            </p>
+            <p>
+              Aesthetics in data visualisation become important as it aids in
+              bridging the knowledge gap. Aesthetic refers to beauty and has
+              been proven to be important as it has the potential to make
+              information easily understood. Aesthetics become important through
+              colour, size, scale, positioning, typography, conveyance, and the
+              way they are interacted with. (Cawthon and Moere, 2007). As
+              mentioned above, human perception of traditional data makes it
+              difficult to withdraw information (Li, 2020). Aesthetics has been
+              proven to increase user ease of use of the entire system (Tuch et
+              al., 2012). Aesthetic is personally important, specifically for
+              people who have issues with concentrating and get easily
+              overwhelmed by numerical information and walls of text, especially
+              in children which only worsens in adulthood if not treated. The
+              eye-catching appearance of data visuals and well-thought-out
+              layout combats reading disorders that stem from ADHD. (De Silva et
+              al., 2021)
+            </p>
+            <p>
+              With this idea of data and putting it in a visual form to make
+              more sense of it, we need to understand what data and information
+              are. The idea of data varied depending on the context. In this
+              case, data is referring to raw information recorded as the result
+              of an action and therefore has meaning in that context. Come in
+              the form of &ldquo;&hellip;names, numbers, age, signs, characters
+              or symbols&hellip;&rdquo;(Li, 2020). When looking at information
+              and data, especially as someone with the aforementioned
+              conditions, these numerical values and words have no meaning and
+              become increasingly more difficult to interpret when the data
+              scale increases. According to Bellinger, Castro, and Mills, the
+              recording of data has no meaning or use if unable to be understood
+              by humans. (Bellinger et al., 2004)
+            </p>
+            <p>
+              <em
+                >&ldquo;Information is data that has been given meaning by way
+                of relational connection. This &ldquo;meaning&rdquo; can be
+                useful but does not have to be. In computer parlance, a
+                relational database makes for information from the data stored
+                within it&rdquo;</em
+              >
+            </p>
+            <p>-(Li, 2020)</p>
+            <p>
+              As explained, data visualization is to present data in a way that
+              is more easily understood, bridging the knowledge gap and becoming
+              somewhat more accessible as we progress as humans. This means that
+              data visualization comes in many forms. These different forms of
+              data visualization all are able to represent data in the most
+              conducive way. (Li, 2020)
+            </p>
+            <p>
+              Since data visualization has exists to bridge knowledge gaps and
+              make information easily digestible and elucidate patterns, there
+              are characteristics of data visualization that need to be present.
+              For example, it needs to be readable, like previously stated, if
+              data can&rsquo;t be understood or interpreted by humans it is
+              rendered useless. Second, is recognizability. This refers to users
+              being able to identify knowledge from previously. Thirdly and
+              last, the visual data should be easily understood (Li, 2020). This
+              point has been reiterated throughout this analysis. This brings an
+              interesting conversation about accessibility.
+            </p>
+            <p>
+              Talking about accessibility, the conversation about human
+              perception and data visualization is created. It&rsquo;s
+              incredibly important, another repeated point is that without data
+              being perceived by humans it is useless. Users are being asked to
+              formulate an opinion based on the visuals presented. As Ward et
+              all. have exclaimed, perception is the way the world is
+              interpreted by us. Developing a mental image of the environment.
+              The human brain is known to &lsquo;fill in the gaps&rsquo; where
+              there is ambiguity using known information (Ward et al., 2011).
+              The perceptual process is a psychological study about this. How
+              humans perceive and keep information. That due to the brain using
+              previously learnt information to fill in ambiguity, there is a
+              very quick yet low-level system in humans that can make sense of
+              visuals. This was named &ldquo;preattentive&rdquo;
+              (&ldquo;Perception in Visualization,&rdquo; n.d.).
+            </p>
+            <p>
+              More with accessibility, there has been a repeated idea through
+              the analysis of data visualization and it&rsquo;s that it to
+              bridge the gap in knowledge. This then makes information more
+              accessible. An article called &ldquo;Reaching Broader Audiences
+              with Visualization&rdquo; (Lee et al., 2020) talks about this. For
+              example, when there is about thirty-six million blind people, an
+              obvious huge issue in terms of data visualization, people with
+              IDDs (intellectual and developmental disabilities) are left out of
+              the conversation. Previously it was said that data is being
+              presented on computers, for someone who has physical disabilities
+              might have difficulties accessing these. Knowledge is supposed to
+              be for everyone, and the only way knowledge can expand, and grow
+              is with the views of everyone from different backgrounds and
+              perspectives. Credit is given where credit is due, data
+              visualization does account for colour blindness as graphs and
+              charts can be differentiated with patterns rather than colours.
+              (Lee et al., 2020)
+            </p>
+            <p>
+              Data visualization is incredibly important in making information
+              easily accessible and digested by the viewer. It allows for
+              patterns which would otherwise be hidden in walls of texts and
+              numbers to emerge. Trends become easier to spot and therefore
+              easier for decisions and opinions to be made. The data can be
+              presented traditionally that is something that is seen very
+              commonly but due to human perception, aesthetics come into play.
+              Aesthetics helps cater for people who have difficulty
+              concentrating and get easily overwhelmed by walls of text or
+              numbers. Data comes in many forms and being placed in visuals
+              makes them easier to understand. Data needs to be understood by
+              humans because without the understanding or perception, the data
+              becomes useless, It is essentially just a list of random things.
+              Since data needs to be taken in by humans, there are huge groups
+              of marginalized people being left out and have no way of accessing
+              data, progress has been made as there is some catering towards
+              colour blind people.<em><br /></em>
+            </p>
+            <p>References</p>
+            <p>
+              Agrawal, R., Kadadi, A., Dai, X., Andres, F., 2015. Challenges and
+              opportunities with big data visualization, in: Proceedings of the
+              7th International Conference on Management of Computational and
+              Collective IntElligence in Digital EcoSystems. ACM, Caraguatatuba
+              Brazil, pp. 169&ndash;173. https://doi.org/10.1145/2857218.2857256
+            </p>
+            <p>
+              Bellinger, G., Durval Castro, Mills, A., 2004. Data, Information,
+              Knowledge, and Wisdom.
+            </p>
+            <p>
+              Cawthon, N., Moere, A.V., 2007. The Effect of Aesthetic on the
+              Usability of Data Visualization, in: 2007 11th International
+              Conference Information Visualization (IV &rsquo;07). pp.
+              637&ndash;648. https://doi.org/10.1109/IV.2007.147
+            </p>
+            <p>
+              De Silva, S., Dayarathna, S., Ariyarathne, G., Meedeniya, D.,
+              Jayarathna, S., Michalek, A.M.P., 2021. Computational Decision
+              Support System for ADHD Identification. Int. J. Autom. Comput. 18,
+              233&ndash;255. https://doi.org/10.1007/s11633-020-1252-1
+            </p>
+            <p>
+              Gatto, M.A.C., n.d. Making Research Useful: Current Challenges and
+              Good Practices in Data Visualisation 56.
+            </p>
+            <p>
+              Lee, B., Choe, E.K., Isenberg, P., Marriott, K., Stasko, J., 2020.
+              Reaching Broader Audiences With Data Visualization. IEEE Comput.
+              Grap. Appl. 40, 82&ndash;90.
+              https://doi.org/10.1109/MCG.2020.2968244
+            </p>
+            <p>
+              Li, Q., 2020. Embodying Data: Chinese Aesthetics, Interactive
+              Visualization and Gaming Technologies. Springer Singapore,
+              Singapore. https://doi.org/10.1007/978-981-15-5069-0
+            </p>
+            <p>
+              Perception in Visualization [WWW Document], n.d. URL
+              https://www.csc2.ncsu.edu/faculty/healey/PP/ (accessed 8.8.22).
+            </p>
+            <p>
+              Tuch, A.N., Roth, S.P., Hornb&aelig;k, K., Opwis, K.,
+              Bargas-Avila, J.A., 2012. Is beautiful really usable? Toward
+              understanding the relation between usability, aesthetics, and
+              affect in HCI. Computers in Human Behavior 28, 1596&ndash;1607.
+              https://doi.org/10.1016/j.chb.2012.03.024
+            </p>
+            <p>
+              Ward, M.O., Grinstein, G., Keim, D., 2011. Interactive Data
+              Visualization: Foundations, Techniques, and Applications. A K
+              Peters/CRC Press, New York. https://doi.org/10.1201/9780429108433
+            </p>
+            <p>&nbsp;</p>
+          </div>
         </section>
-       
-          <section id="UIUX">
-            <div class="writings" aria-label="text on the analysis of my UI and UXs">
-              
-            <h3>Analysis on my UI and UX  </h3>
-       
-<p>UI design refers to User Interface. This is what an application looks like and its layout. Its usually buttons and navigation bars, animations, shapes, colours, and font. It is the interaction between all of these in order to push the user towards their desired action.(Zinātnes, n.d.)</p>
-<p>The navigation bar is at the top which highlight the screen too a lighter red to ensure the user knows they are hovering over the links. These colours have been chosen as they are the colours most often associated with Apex legends as well as darker colours and red are associated with the e-sports and gaming scene which stems from RGB (red, green, blue) appliances.</p>
-<p>On the other pages, the homepage is the only tab that you have access to and there is an arrow that signifies that that is where you will be going.</p>
-<p>On the blogs page, there is a stick scroll function where the navigation stays on the side of the screen so that the user has constant access to any part of the page and removes the need to have to scroll past walls of text.</p>
-<p>The dark aesthetics are used to make the website easier on the eyes. The dark colours are also reminiscent of the late night gaming sessions when you weren&rsquo;t allowed to be up as a child that many people have experienced. Having to play these games in the dark with nothing but your screen to light things up. This is a common memory among players. The reason for this nostalgia is because as these players grow up they get into professional e-sports and become competitors.</p>
-<p>On the first page, your attention is immediately drawn to the logo and then your eyes are brought up towards the links as they are a lighter more saturated red. As you scroll on the homepage the new seasons banner is shown with the description of the game. I will add in the explanation&nbsp; of what exactly the ALGS are using the banner colours.</p>
-References
-<p>
-Zinātnes, C.D.H., n.d. DAUGAVPILS UNIVERSITĀTES 61. STARPTAUTISKĀS ZINĀTNISKĀS KONFERENCES RAKSTU KRĀJUMS 164.</p>
 
+        <section id="UIUX">
+          <div
+            class="writings"
+            aria-label="text on the analysis of my UI and UXs"
+          >
+            <h3>Analysis on my UI and UX</h3>
 
-            </div>  
-          </section>
-         
+            <p>&nbsp;</p>
+            <p><em>&ldquo;UI supports UX, UI extends the UX, and, for sure, UI is the vehicle for UX. UI is the user connection to your application, which needs to be as simple and as clear as possible for your user. It must allow your user to do their work in a pleasing, easy, and efficient manner.&rdquo;</em></p>
+            <p><em>-</em>(Canziba, 2018)</p>
+            <p>User Interface(UI) talks about the system that the user will be interacting with to relay their commands for the product. This is done through research techniques that allow the creators to understand how users&rsquo; brains work. UX refers to user experience and is an &ldquo;HCI-related concept&rdquo;(human-computer interface). (Joo, 2017)</p>
+            <p>The interface is heavily reliant on design and interaction. This led to the 1 .&nbsp; &ldquo;Evolution of Minimal Design,&rdquo; which focuses on clear visual navigation and communication. The second is a 2. &ldquo;increase in Micro Interaction,&rdquo; this is to allow for the user to have as much control over their decisions. 3. Moving pictures have also become more popular to catch users&rsquo; attention and hold it. 4.&nbsp; It is important to be using rich colours and recognisable yet in theme typography as it pulls together the whole aesthetic and conveys the desired message from the product the last one is 5. &ldquo;Long scrolling and parallax technique websites&rdquo; refers to the infinite scrolling on a website as well as scrolling on mobile devices. (Joo, 2017)</p>
+            <p>On my homepage, there is a navigation bar that changes the colour of the page when hovered over to show users they are in the correct place. On other pages, there is a homepage button that is a circle and when hovering it reveals the home page button. On the blogs page, there is something called sticky navigation where there are the headings of each blog post which leads to easy clear navigation of the page where the user cannot get lost.</p>
+            <p>Within my own website, I will analyse how the decisions were made to adhere to these design elements and where there are improvements that need to be made, and what needs to be removed.</p>
+            <p>On the homepage the biggest issue that can be seen is that the top bar navigation isn&rsquo;t clear at first, there is nothing separating the navigation from the rest of the page. Minimalism can be seen as the homepage is just basic on information and navigation. In order to introduce the micro-interactions, I plan on having a central home button(menu icon) that opens a menu of the possible other pages the user can go to and then subheadings of more specific places on the website users can go. This is something I wish to implement throughout the whole website as there isn&rsquo;t a consistent navigation system. The navigation changes and looks out of place, confusing the users. Another thing I wish to implement on the homepage is screen-wide images that show the possible information that is displayed on the website (for example, a section that explains the Apex Legends Esports scene and a button that leads to more information). This will be easier to navigate through the implementation of the sticky navigation bar on the home page.</p>
+            <p>The page is Reminiscent of the EA Apex Legends website as that is what is about specifically and that is why the Apex Legends font is used. This is why the colour scheme of black and red however I am deciding on changing this as this isn&rsquo;t intuitive for users to be staring and bright reds or white on black, it makes the website difficult to look at. To fix this, I will be using the colours for the newest season (Season 14 is blues and greens). This will liven up the website and allow for a more creative aspect ( point number 4). One thing I want to bring to the forefront of developing my website is that it is more compatible with mobile users and can adapt to resolution changes. That was something I neglected on the previous website and want to work on it on this one.</p>
+            <p>One thing that is personal to me that I have been exploring on my websites is the use of colours that are considered &ldquo;feminine&rdquo; in male-dominated spaces. This is a perfect opportunity as e-sports and gaming, in general, are male-dominated. I want to combat the unprofessionalism that is associated with these colours and aesthetics as the idea of being feminine is seen as something to overcome and therefore less than rather than a concept that exists alongside masculinity.</p>
+            <p>UI and UX is an important aspect of products that are being navigated by users, this is all products. In order to be able to create an intuitive and well-made product, you need to understand the aspects of UI/UX. All come together to create a coherent and well-made product. An amalgamation of these things makes a story and promote the experience the creator desire.</p>
+            <p>&nbsp;</p>
+            <p>References</p>
+            <p>Canziba, E., 2018. Hands-On UX Design for Developers: Design, prototype, and implement compelling user experiences from scratch. Packt Publishing Ltd.</p>
+            <p>Joo, H., 2017. A Study on Understanding of UI and UX and Understanding of Design According to User Interface Change 12, 5.</p>
+            <p>&nbsp;</p>
+          </div>
+        </section>
       </div>
       <div class="section-nav">
         <ol role="navigation">
@@ -91,11 +309,15 @@ Zinātnes, C.D.H., n.d. DAUGAVPILS UNIVERSITĀTES 61. STARPTAUTISKĀS ZINĀTNISK
           <li role="Go to homepage button"><a href="#home">Homepage</a></li>
           <ul role="navigation">
             <p>The Blogs</p>
-          <li role="Go to The WWW" class=""><a href="#ODV">Overview of Data Visualization</a></li>
-          <li role="Go to My UIUX analysis" class=""><a href="#UIUX">Analysis on my UI and UX </a></li>  
-        </ul>
+            <li role="Go to The WWW" class="">
+              <a href="#ODV">Overview of Data Visualization</a>
+            </li>
+            <li role="Go to My UIUX analysis" class="">
+              <a href="#UIUX">Analysis on my UI and UX </a>
+            </li>
+          </ul>
         </ol>
-    </div>
+      </div>
     </main>
-    </body>
+  </body>
 </html>

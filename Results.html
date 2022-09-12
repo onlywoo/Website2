@@ -7,21 +7,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="CSS/Normalize.css" />
     <link rel="stylesheet" href="CSS/results.css" />
+    <script src="dropdown.js"></script>
   </head>
   <body>
-    <nav>   
-      <section id="home">
-            <ul role="navigation">
-            <h1  aria-label="Statistics of Most Recent ALGS">Statistics of Most Recent ALGS</h1>
-      <a href="index.html" class="cta">
-      <span>Homepage</span>
-      <svg width="13px" height="10px" viewBox="0 0 13 10">
-      <path d="M1,5 L11,5"></path>
-      <polyline points="8 1 12 5 8 9"></polyline>
-    </svg>
-  </a>
-  </section>
-  </nav>
+    <div class="heading">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Menu</button>
+        <div id="myDropdown" class="dropdown-content">
+          <section id="home">
+            <a href="index.html" class="nav-links">Home</a>
+
+            <a href="Results.html" class="nav-links">Results</a>
+
+            <a href="Statistics.html" class="nav-links">Data</a>
+
+            <a href="blogs.html" class="nav-links">Blogs</a>
+
+            <a href="styleyGuid.html" class="nav-links">Style Guide</a>
+          </section>
+        </div>
+      </div>
+      <p> data art placeholder</p>
     <img src="Images/Results.png" width="1500" height="750" alt="" />
     <p>Screenshot from https://battlefy.com/apex-legends-global-series-year-2/ showing the information i will have, along with the tree that shows the ALGS format (show which teams qualified and their points)</p>
   </body>
