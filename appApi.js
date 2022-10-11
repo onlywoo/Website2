@@ -19,17 +19,15 @@ async function getData()
     const api_url = "https://makeup-api.herokuapp.com/api/v1/products.json";
     const api_data = await fetch(api_url);
     const api_json = await api_data.json();
-    const stats = api_json.slice(0, 5);
-    console.log(api_data);
-    let selected = stats;
+    const stats = api_json.slice(0, 4);
+    console.log(stats);
 
 
-
-
+ let selected = stats;
 
 const WIDTH = 800;
-const HEIGHT = 450 ;
-const MARGIN = { top: 50, bottom: 10, left: 90, right: 90 };
+const HEIGHT = 400 - MARGIN.top - MARGIN.bottomg;
+const MARGIN = { top: 50, bottom: 10 };
 
 
 
@@ -40,12 +38,12 @@ const chartContainer = d3.select('svg')
 const chart = chartContainer.append('g');
 
 //scales
-const xScale = d3.scaleBand().rangeRound([0, WIDTH]). padding(0.1);
+const xScale = d3.scaleBand().rangeRound([0, WIDTH]). padding(0.15);
 const yScale = d3.scaleLinear().range([HEIGHT, 0]);
 
 //domains
 xScale.domain(stats.map((d) => d.name));
-yScale.domain([0, d3.max(stats, (d)=> d.TotalPoints) +1]);
+yScale.domain([0, d3.max(stats, (d)=> d.TotalPoints) +1000]);
   
 function render(){
 //draw bars
@@ -124,4 +122,5 @@ render();
 })
 
 }
+
 getData();

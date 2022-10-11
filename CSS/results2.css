@@ -78,6 +78,7 @@ p {
     padding-bottom: 10px;
 }
 
+
 rect {
     fill: #490909;
 }
@@ -87,14 +88,13 @@ rect {
 }
 
 .graph {
-
     margin-left: 390px;
     margin-top: 100px;
 }
 
 #stats {
     background-color: white;
-    padding: 20psx;
+    padding: 20px;
     border-radius: 15px 120px 15px 15px;
     margin-right: 300px;
 }
@@ -121,34 +121,15 @@ rect {
 
 }
 
-.MP {
-    background-color: #73c8b1;
-    padding-top: 1px;
-    border-radius: 30px 0px 15px 15px;
-    color: black;
-    position: relative;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 2%;
-
-}
-
-.MP h1 {
-    font-size: 3ch;
-    padding-top: 5px;
-    margin: 6%;
-
-}
-
-.MP p {
-    font-size: 2.5ch;
-    margin: 2%;
-    padding-bottom: 15px;
-}
-
 h1 {
     color: white;
     margin-left: 40%;
+}
+
+h3 {
+    font-size: 2ch;
+    color: white;
+    margin-left: 30%;
 }
 
 .link {
@@ -157,11 +138,6 @@ h1 {
     text-decoration: none;
 
     margin: 50px;
-}
-
-.cont {
-    color: black;
-    margin-right: 20px;
 }
 
 .link a {
@@ -188,9 +164,4 @@ h1 {
 .link p {
     color: white;
     font-size: 2.5ch;
-}
-
-.info {
-    color: white;
-    font-size: 2.3ch;
 }
