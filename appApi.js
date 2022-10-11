@@ -26,7 +26,7 @@ async function getData()
  let selected = stats;
 
 const WIDTH = 800;
-const HEIGHT = 400 - MARGIN.top - MARGIN.bottomg;
+const HEIGHT = 400;
 const MARGIN = { top: 50, bottom: 10 };
 
 

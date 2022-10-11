@@ -2,7 +2,8 @@
   float: left;
   margin-top: -200px;
   margin-left: 600px;
-  width: 32%;
+  max-width: 32%;
+  height: auto;
   position: absolute;
 }
 
@@ -14,6 +15,8 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  max-width: 100%;
+  height: auto;
 }
 
 .esports h1 {
