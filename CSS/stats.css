@@ -1,6 +1,4 @@
 body {
-
-
   background-image: linear-gradient(180deg, black, #87635a, #368363);
   height: 400ch;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -94,11 +92,6 @@ rect {
   fill: #7fb1a7;
 }
 
-.graph2 rect {
-
-
-  fill: #7fb1a7;
-}
 
 .link {
   color: white;

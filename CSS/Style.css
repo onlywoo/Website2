@@ -1,34 +1,40 @@
 .Apexlogo {
-
   float: left;
-  margin-right: 400px;
-
+  margin-top: -200px;
+  margin-left: 600px;
   width: 32%;
-  position: relative;
+  position: absolute;
 }
 
 .esports {
-
-  display: flex;
+  padding-bottom: 320px;
+  margin-left: 100px;
+  margin-top: 100px;
+  display: absolute;
   align-items: center;
   justify-content: center;
-
-
+  position: relative;
 }
 
-.esports p {
+.esports h1 {
+  color: white;
+  font-size: 3ch;
+  margin-top: -310px;
+  margin-left: 50px;
+}
+
+.p {
+  position: absolute;
   color: white;
   font-size: 2.5ch;
+  margin-top: -0px;
   margin-left: 100px;
-  margin-right: 80px;
-  margin-top: 50px;
-  background: #caac88;
-  padding: 50px;
-  border-radius: 10%;
 }
 
-.jump a {
-  margin-left: 50px;
+.jump {
+  margin-top: -108px;
+  margin-left: 269px;
+  margin-bottom: 230px;
 }
 
 
@@ -150,7 +156,6 @@ body {
   position: absolute;
   bottom: -650px;
   left: 100px;
-
   background-image: url('Images\Vantage.png');
   color: white;
 
@@ -211,4 +216,65 @@ body {
 
 .credit {
   font-size: 1ch;
+}
+
+
+
+.format {
+  color: white;
+
+}
+
+.suggestions {
+
+
+  border-radius: 8%;
+  float: right;
+  margin: 20px;
+  margin-right: 50px;
+  padding: 50px;
+}
+
+.suggestions image {
+  display: inline-block;
+  margin-left: 500px;
+  position: relative;
+}
+
+.suggestions h2 {
+  margin-top: -435px;
+  margin-left: 50px;
+  position: absolute;
+
+}
+
+.suggestions h3 {
+  margin-top: -350px;
+  margin-left: 50px;
+
+}
+
+.suggestions h3 p {
+  padding-top: 20px;
+}
+
+.linkto p {
+  font-size: 3ch;
+  color: white;
+  margin-left: 100px;
+}
+
+.linkto a {
+  font-size: 3ch;
+  color: white;
+  margin-left: 680px;
+  margin-top: 300px;
+  text-decoration: none;
+  background-image: linear-gradient(to bottom right, #8ce9d6, #caac88, #a36e5e);
+  border-radius: 15px 10px;
+  padding: 1%;
+}
+
+.linkto a:active {
+  text-decoration: none;
 }
