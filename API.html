@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DataVisualisation</title>
     <link rel="stylesheet" href="CSS/Normalize.css" />
-    <link rel="stylesheet" href="CSS/stats.css" />
+    <link rel="stylesheet" href="CSS/results2.css" />
 
 
     <script src="dropdown.js"></script>
@@ -19,7 +19,7 @@
           <section id="home">
             <a href="index.html" class="nav-links">Home</a>
 
-            <a href="Results.html" class="nav-links"> ALGS Results</a>
+            <a href="Results.html" class="nav-links">ALGS Results</a>
 
             <a href="Statistics.html" class="nav-links">Data</a>
 
@@ -29,12 +29,17 @@
           </section>
         </div>
       </div>
-      <div class="link"><p>Go to:</p><a href="Statistics.html" class="nav-links">Stormpoint</a></div>
-      <div class="link"> <a href="API.html" class="nav-links">Most used legends</a></div>
+      
+
       <h1>Data Visualization</h1>
+      <h1>Most Picked Legends</h1>
+      <div class="link"><p></p><a href="Statistics.html" class="nav-links">Stormpoint</a></div>
+      <div class="link"><a href="graph2.html" class="nav-links">Olympus</a></div>
+
+ 
     </div>
 
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
    
       .rect:hover { opacity: 0.5; }
@@ -42,19 +47,16 @@
   </head>
   <body>
    
-   
-    <div class="cont" style="text-align: center;">
-      <script src="https://d3js.org/d3.v5.min.js"></script>
-      <h1>Most Picked Legends on the map Olympus</h1>
+
      
-      <div id="d3-container2" >
-    </div>
-
-    <div class=" info">
-        <h1>Legends</h1>  <p>On this graph we see Valkyrie at 100%.</p><p>One thing to note, Gibralta and Caustic seem to be the next two consistent legends</p><p>This is mainly because its almost impossible to fight these legends without using them in your own team composition</p>
-     </div>
-  
-    <script type="text/javascript" src="graph.js"></script>
-
+      <div class="graph">
+        <div id="stats"><div id="chart" >
+          <svg></svg>
+                  </div>
+                <div id="data">
+                  <ul></ul>
+                </div></div>
+              </div>
+              <script src="appApi.js"></script>
   </body>
 </html>
