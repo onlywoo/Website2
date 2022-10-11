@@ -16,7 +16,7 @@
 //api 
 async function getData()
 {
-    const api_url = "https://mocki.io/v1/c951dc02-f1b7-4f32-ac73-ea7a00ee47e3";
+    const api_url = "https://makeup-api.herokuapp.com/api/v1/products.json";
     const api_data = await fetch(api_url);
     const api_json = await api_data.json();
     const stats = api_json.slice(0, 5);
@@ -25,9 +25,9 @@ async function getData()
 
  let selected = stats;
 
-const MARGIN = { top: 50, bottom: 10 };
+ const MARGIN = { top: 50, bottom: 10 };
 const WIDTH = 600;
-const HEIGHT = 500 - MARGIN.top - MARGIN.bottom ;
+const HEIGHT = 600 - MARGIN.top - MARGIN.bottom ;
 
 
 
@@ -44,7 +44,7 @@ const yScale = d3.scaleLinear().range([HEIGHT, 0]);
 
 //domains
 xScale.domain(stats.map((d) => d.name));
-yScale.domain([0, d3.max(stats, (d)=> d.rate) + 1000]);
+yScale.domain([0, d3.max(stats, (d)=> d.price) + 50]);
   
 function render(){
 //draw bars
@@ -54,9 +54,9 @@ chart.selectAll('.bar')
 .append('rect')
 .classed('bar', true)
 .attr('width',xScale.bandwidth())
-.attr('height', data => HEIGHT - yScale(data.rate))
+.attr('height', data => HEIGHT - yScale(data.price))
 .attr('x', data => xScale(data.name) )
-.attr('y',data => yScale(data.rate) )
+.attr('y',data => yScale(data.price) )
 .attr('fill', '#alalal');
 
 
@@ -72,9 +72,9 @@ chart.selectAll('.label')
 .data(selected,data => data.id)
 .enter()
 .append('text')
-.text(data => data.rate)
+.text(data => data.price)
 .attr('x', data => xScale(data.name) +(xScale.bandwidth()/2))
-.attr('y', data => yScale(data.rate)-100)
+.attr('y', data => yScale(data.price)-100)
 .attr('text-anchor', 'middle')
 .classed('label', true)
 ;
