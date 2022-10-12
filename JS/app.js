@@ -1,15 +1,23 @@
-const data =[{name: 'Gibralta',  pickRate: 83.0},
-{name: 'Wattson',  pickRate: 17.0},
-{name: 'Crypto',  pickRate: 5.0},
-{name: 'Caustic',  pickRate: 63.0},
-{name: 'Loba',  pickRate: 4.0},
-{name: 'Horizon',  pickRate: 7.0},
-{name: 'Seer',  pickRate: 18.0},
-{name: 'Fuse',  pickRate: 0.0},
-{name: 'Valkyrie',  pickRate: 98.0},
-{name: 'Lifeline',  pickRate: 0.0},
-{name: 'Newcastle',  pickRate: 5.0}
-];
+//const data =[{name: 'Gibralta',  pickRate: 83.0},
+//{name: 'Wattson',  pickRate: 17.0},
+//{name: 'Crypto',  pickRate: 5.0},
+//{name: 'Caustic',  pickRate: 63.0},
+//{name: 'Loba',  pickRate: 4.0},
+//{name: 'Horizon',  pickRate: 7.0},
+//{name: 'Seer',  pickRate: 18.0},
+//{name: 'Fuse',  pickRate: 0.0},
+//{name: 'Valkyrie',  pickRate: 98.0},
+//{name: 'Lifeline',  pickRate: 0.0},
+//{name: 'Newcastle',  pickRate: 5.0}
+//];
+
+  async function getData()
+{
+    const api_url = "https://mocki.io/v1/d51a55e3-ddfc-453e-8d1e-fee8a437b13b";
+    const api_data = await fetch(api_url);
+    const api_json = await api_data.json();
+    const data = api_json;
+    console.log(data);
 
 
 const width = 1200;
@@ -59,3 +67,5 @@ function xAxis(g) {
 svg.append("g").call(xAxis);
 svg.append("g").call(yAxis);
 svg.node();
+}
+getData();

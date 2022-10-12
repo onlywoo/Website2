@@ -1,0 +1,56 @@
+[{name: 'Gibralta',  pickRate: 83.0},
+{name: 'Wattson',  pickRate: 17.0},
+{name: 'Crypto',  pickRate: 5.0},
+{name: 'Caustic',  pickRate: 63.0},
+{name: 'Loba',  pickRate: 4.0},
+{name: 'Horizon',  pickRate: 7.0},
+{name: 'Seer',  pickRate: 18.0},
+{name: 'Fuse',  pickRate: 0.0},
+{name: 'Valkyrie',  pickRate: 98.0},
+{name: 'Lifeline',  pickRate: 0.0},
+{name: 'Newcastle',  pickRate: 5.0}
+]
+
+[
+{
+"name": "Gibralta",
+"pickRate":"83.0"
+},
+{
+"name": "Wattson",
+"pickRate":"17.0"
+},
+{
+"name": "Crypto",
+"pickRate": "5.0"
+},
+{
+"name":"Caustic",
+"pickRate": "63.0"
+},
+{
+"name": "Loba",
+"pickRate": "4.0"
+},
+{
+"name":"Horizon",
+ "pickRate": "7.0"
+},{
+"name":"Seer",
+"pickRate": "18.0"
+
+},{
+"name": "Fuse",
+"pickRate": "0.0"
+},{
+"name": "Valkyrie",
+"pickRate":"98.0"
+},{
+"name": "Lifeline",
+"pickRate": "0.0"
+ },{
+ "name": "Newcastle",
+ "pickRate": "5.0"
+ }
+]
+
