@@ -104,3 +104,10 @@ html {
 #my_dataviz {
     color: white;
 }
+
+.heading p {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 2.5ch;
+    color: black;
+}
