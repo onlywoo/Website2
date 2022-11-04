@@ -64,6 +64,7 @@ chart.selectAll('.label')
 .attr('y', data => yScale(data.TotalPoints)-10)
 .attr('text-anchor', 'middle')
 .classed('label', true)
+.style("color", "black")
 ;
 
 //remove label

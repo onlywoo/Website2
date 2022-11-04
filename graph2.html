@@ -29,30 +29,39 @@
           </section>
         </div>
       </div>
-      <div class="link"><p>Go to:</p><a href="Statistics.html" class="nav-links">Stormpoint</a></div>
-      <div class="link"> <a href="API.html" class="nav-links">Most used legends</a></div>
-      <h1>Data Visualization</h1>
-    </div>
+      <div class="buttons">
+        <div class="link"> <p>Go to:</p><a href="Statistics.html" class="nav-links">Stormpoint</a></div>
+       </div>
+        <div class="buttons"> 
+          <div class="link"> <p></p><a href="API.html" class="nav-links">ALGS Results (interactive)</a></div> 
+        </div>
     <style>
    
       .rect:hover { opacity: 0.5; }
     </style>
   </head>
   <body>
+  <div>
+  <h1>Data Visualization</h1>
+</div>
+   <div class="graphHeading">  
+    <h1>Most Picked Legends on the map Olympus</h1>
+  </div>
    
-   
+    <div class="graph">
+      <div id="stats"><div id="chart" >
     <div class="cont" style="text-align: center;">
+      <div class="MP">    
 
-      <h1>Most Picked Legends on the map Olympus</h1>
      
       <div id="d3-container2" >
     </div>
-
-    <div class=" info">
-        <h1>Legends</h1>  <p>On this graph we see Valkyrie at 100%.</p><p>One thing to note, Gibralta and Caustic seem to be the next two consistent legends</p><p>This is mainly because its almost impossible to fight these legends without using them in your own team composition</p>
-     </div>
+  </div></div></div>
   
-    <script type="text/javascript" src="JS/graph.js"></script>
+    <div class= "info">
 
+        <p>On this graph we see Valkyrie at 100%.</p><p>One thing to note, Gibralta and Caustic seem to be the next two consistent legends</p><p>This is mainly because its almost impossible to fight these legends without using them in your own team composition</p>
+     </div>
+    <script type="text/javascript" src="JS/graph.js"></script>
   </body>
 </html>

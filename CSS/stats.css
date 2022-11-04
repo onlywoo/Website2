@@ -1,7 +1,9 @@
 body {
-  background-image: linear-gradient(180deg, black, #87635a, #368363);
+  background-image: linear-gradient(180deg, black, #87635a, #08051f);
   height: 400ch;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  display: grid;
 }
 
 
@@ -21,7 +23,7 @@ body {
 .dropbtn {
   color: white;
   background-color: #8ce9d6;
-  background-image: linear-gradient(to bottom right, #8ce9d6, #caac88, #a36e5e);
+  background-image: linear-gradient(to bottom right, #08051f, #a36e5e);
   border: 0;
   border-radius: .25rem;
   box-sizing: border-box;
@@ -87,19 +89,64 @@ body {
   padding-bottom: 10px;
 }
 
+
+.buttons {
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
 rect {
+  fill: #490909;
 
-  fill: #7fb1a7;
 }
 
-
-.link {
-  color: white;
-
-  text-decoration: none;
-
-  margin: 50px;
+.cont {
+  background-color: white;
+  border-radius: 15px 120px 15px 15px;
+  margin-right: -10%;
 }
+
+.graph {
+  margin-left: 20%;
+  margin-right: 10%;
+  margin-top: 20%;
+
+}
+
+.MP {
+  padding-top: 1px;
+  border-radius: 30px 0px 15px 15px;
+  color: black;
+  position: relative;
+  margin-left: -6%;
+  margin-right: 10%;
+  margin-top: -40%;
+  margin-bottom: 20%;
+}
+
+.graphHeading {
+  position: relative;
+  margin-top: 20%;
+  margin-left: -15%;
+  color: black;
+  padding-top: 1px;
+  border-radius: 30px 0px 15px 15px;
+
+}
+
+.MP h1 {
+  font-size: 3ch;
+  padding-top: 5px;
+  margin: 6%;
+  color: black;
+}
+
+.MP p {
+  font-size: 2.5ch;
+  margin: 2%;
+  padding-bottom: 15px;
+}
+
 
 .cont {
   color: white;
@@ -107,7 +154,7 @@ rect {
 }
 
 .link a {
-  background-image: linear-gradient(to bottom right, #8ce9d6, #caac88, #a36e5e);
+  background-image: linear-gradient(to bottom right, #08051f, #a36e5e);
   border: 0;
   border-radius: .25rem;
   box-sizing: border-box;
@@ -133,6 +180,19 @@ rect {
 }
 
 .info {
-  color: white;
-  font-size: 2.3ch;
+  background-color: #73c8b1;
+  padding-top: 5px;
+  border-radius: 30px 0px 15px 15px;
+  color: black;
+  position: relative;
+  margin-left: -5%;
+  margin-right: 0%;
+  margin-top: -10%;
+  margin-bottom: 20%;
+  font-size: 3ch;
+}
+
+.info p {
+  padding: 1%;
+
 }

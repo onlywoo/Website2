@@ -43,8 +43,7 @@
 
 body {
   height: 300ch;
-  background-image: linear-gradient(180deg, black, #368363);
-
+  background-image: linear-gradient(180deg, black, #87635a, #08051f);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -80,7 +79,7 @@ body {
 
 .dropbtn {
   background-color: #8ce9d6;
-  background-image: linear-gradient(to bottom right, #8ce9d6, #caac88, #a36e5e);
+  background-image: linear-gradient(to bottom right, #08051f, #a36e5e);
   border: 0;
   border-radius: .25rem;
   box-sizing: border-box;
@@ -273,7 +272,7 @@ body {
   margin-left: 680px;
   margin-top: 300px;
   text-decoration: none;
-  background-image: linear-gradient(to bottom right, #8ce9d6, #caac88, #a36e5e);
+  background-image: linear-gradient(to bottom right, #08051f, #a36e5e);
   border-radius: 15px 10px;
   padding: 1%;
 }

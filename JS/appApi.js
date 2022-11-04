@@ -19,7 +19,7 @@ async function getData()
     const api_url = "https://mocki.io/v1/c951dc02-f1b7-4f32-ac73-ea7a00ee47e3";
     const api_data = await fetch(api_url);
     const api_json = await api_data.json();
-    const stats = api_json.slice(0, 5);
+    const stats = api_json.slice(0, 10);
     console.log(stats);
 
 
@@ -44,7 +44,7 @@ const yScale = d3.scaleLinear().range([HEIGHT, 0]);
 
 //domains
 xScale.domain(stats.map((d) => d.name));
-yScale.domain([0, d3.max(stats, (d)=> d.rate) + 1000]);
+yScale.domain([0, d3.max(stats, (d)=> d.rate) + 100]);
   
 function render(){
 //draw bars

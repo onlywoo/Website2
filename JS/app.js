@@ -41,7 +41,6 @@ const y = d3.scaleLinear()
 
 svg
   .append("g")
-  .attr("fill", 'royalblue')
   .selectAll("rect")
   .data(data.sort((a, b) => d3.descending(a.pickRate, b.pickRate)))
   .join("rect")

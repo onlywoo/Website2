@@ -30,29 +30,42 @@
           </section>
         </div>
       </div>
+      
+      <div class="buttons">
       <div class="link"> <p>Go to:</p><a href="graph2.html" class="nav-links">Olympus</a></div>
-      <div class="link"> <p></p><a href="API.html" class="nav-links">Most used legends</a></div>
-      <h1>Data Visualization</h1>
-    </div>
+     </div>
+      <div class="buttons"> 
+        <div class="link"> <p></p><a href="API.html" class="nav-links">ALGS Results (interactive)</a></div> 
+      </div>
+
 
     <style>
    
       .rect:hover { opacity: 0.5; }
     </style>
   </head>
-  <body>       
-    <div class="cont" style="text-align: center;">
-      <h1>Most Picked Legends on the map Stormpoint</h1>
-      <div id="d3-container" >
- 
+  <body>   
+         <div>
+      <h1>Data Visualization</h1>
     </div>
-    <script type="text/javascript" src="JS/app.js"></script>
-   
-   <div class=" info">
-    <h1>Legends</h1>
-    <p>This graph portrays the most to least picked Legend during the 2021-2022 champions circuit. Looking at both charts there is a recurring legend, Valkyrie. </p>
-      <p>She is one of the more unbalanced/stronger characters in terms of how many abilities she has.</p>
-   </div>
+    <div class="graphHeading">  
+      <h1>Most Picked Legends on the map Stormpoint</h1>
+    </div>
 
+    <div class="graph">
+      <div id="stats"><div id="chart" >
+    <div class="cont" style="text-align: center;">
+      <div class="MP">    
+
+     
+      <div id="d3-container" >
+    </div>
+  </div></div></div>
+  
+    <div class="info">
+      <p>This graph portrays the most to least picked Legend during the 2021-2022 champions circuit. Looking at both charts there is a recurring legend, Valkyrie. </p>
+        <p>She is one of the more unbalanced/stronger characters in terms of how many abilities she has.</p>
+     </div>
+   <script type="text/javascript" src="JS/app.js"></script>
   </body>
 </html>
