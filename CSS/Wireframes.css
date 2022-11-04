@@ -70,3 +70,24 @@ a {
     color: white;
     font-size: 2.5ch;
 }
+
+.new h1 {
+    margin-left: 43%;
+}
+
+.newWire {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5ch;
+    padding: 2%;
+    float: left;
+    margin: 5%;
+    margin-top: -0%;
+    margin-bottom: -3%;
+    margin-right: -8%;
+}
+
+.newSG {
+    margin: 15%;
+    margin-top: 30%;
+    font-size: 2.5ch;
+}
