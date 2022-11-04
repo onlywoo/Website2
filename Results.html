@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="CSS/Normalize.css" />
-    <link rel="stylesheet" href="CSS/results.css" />
+    <link rel="stylesheet" href="CSS/DataArt.css" />
     <script src="JS/dropdown.js"></script>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3-axis@3"></script>
 
     <style>
@@ -17,6 +16,7 @@
     </style>
   </head>
   <body>
+
     <div class="heading">
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Menu</button>
@@ -24,8 +24,7 @@
           <section id="home">
             <a href="index.html" class="nav-links">Home</a>
 
-            <a href="Results.html" class="nav-links">ALGS Results</a>
-
+            <a href="Results.html" class="nav-links">Data Art</a>
             <a href="Statistics.html" class="nav-links">Data</a>
 
             <a href="blogs.html" class="nav-links">Blogs</a>
@@ -34,30 +33,25 @@
           </section>
         </div>
       </div>
-      <div class="cont" style="text-align: center;", >
-        <h1>Final Results of ALGS</h1>
-        <h2>WINNERS</h2>
-        <h3>DARKZERO</h3>
-        
+     
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
 
+<!-- Load color scale -->
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div class="graph">
+  <div id="stats"><div id="chart" >
+          <div id="my_dataviz">
+        </div> </div>
       </div>
-      <div class="graph">
-      <div id="stats"><div id="chart" >
-        <svg></svg>
-                </div>
-              <div id="data">
-                <ul></ul>
-              </div></div>
-            </div>
-      <script src="JS/stats.js"></script>
-  </body>
+<script type="text/javascript" src="JS/dataart.js"></script>
+<!-- A bit of CSS: change stroke color of circle on hover (white -> black) -->
+ </body>
   <footer>
     <div class="MP">
-      <h1>While we see FURIA has the most points, DARKZERO is still the ALGS Championship winner. This is due to the Matchpoint format.</h1>
-        <p>"Match Point</p>
-      <p>The Pro League Regular Season, Playoffs, Championship, Last Chance Qualifier and Pro League Qualifier use the &ldquo;Match Point&rdquo; mechanic in the final round to determine the winners of these events. In this round, Teams compete in a series of matches, with Teams accumulating points in each match according to APPENDIX C5.1. Once a Team reaches fifty (50) points (&ldquo;Match Point Threshold&rdquo;) in this round, it is &ldquo;Match Point Eligible.&rdquo; Once a Team is Match Point Eligible, winning a match (placing first) after the match in which they reach the Match Point Threshold will result in them being declared winners of that tournament. Other Teams will be ranked according to their Round Score from this final round." <span>(Arts, 2022)</span></p>
-          <p>Reference</p>
-          <p>Arts, E., 2022. Apex Legends Esports - Official Rules [WWW Document]. Electronic Arts Inc. URL https://www.ea.com/games/apex-legends/compete/overview/rules (accessed 10.11.22).</p>
+      
     
         </div>
   </footer>

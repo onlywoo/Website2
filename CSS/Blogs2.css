@@ -209,3 +209,8 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.graph {
+    display: inline-block;
+    margin-left: 10%;
+}

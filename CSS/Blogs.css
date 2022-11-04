@@ -204,12 +204,7 @@ section {
   padding: 20px 30px;
   border-color: black;
   border-radius: 20px;
-
-
 }
-
-
-
 
 a {
   text-decoration: none;
@@ -219,6 +214,14 @@ a {
 
 #DataInt {
   position: absolute;
-  margin-top: 25%;
+  margin-top: 24%;
   margin-right: 21%;
+  margin-bottom: 20%;
+}
+
+#DDAW {
+  position: absolute;
+  margin-top: 41%;
+  margin-right: 21%;
+  margin-bottom: 20%;
 }
