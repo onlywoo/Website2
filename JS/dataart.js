@@ -150,6 +150,7 @@ d3.json("https://raw.githubusercontent.com/onlywoo/datavis/main/csvjson.json", f
     // ---------------------------//
 
     // Add legend: circles
+    
    var valuesToShow = [5000000, 10000000, 1000000]
   var xCircle = 1100
    var xLabel = 1200
