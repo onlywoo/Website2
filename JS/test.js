@@ -1,6 +1,6 @@
 const margin = {top: 20, right: 30, bottom: 0, left: 10},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 500 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 const svg = d3.select("#my_dataviz")
@@ -12,18 +12,18 @@ const svg = d3.select("#my_dataviz")
           `translate(${margin.left}, ${margin.top})`);
 
 // Parse the Data
-d3.json("JS\Matches.json").then(function(data) {
+d3.csv("https://raw.githubusercontent.com/onlywoo/datavis/main/data.csv").then(function(data) {
 
   // List of groups = header of the csv files
-  const keys = data.columns.slice(1)
+  const keys = data.columns.slice(9)
 
   // Add X axis
   const x = d3.scaleLinear()
-    .domain(d3.extent(data, function(d) { return d.year; }))
+    .domain([0,9])
     .range([ 0, width ]);
   svg.append("g")
     .attr("transform", `translate(0, ${height*0.8})`)
-    .call(d3.axisBottom(x).tickSize(-height*.7).tickValues([1900, 1925, 1975, 2000]))
+    .call(d3.axisBottom(x).tickSize(-height*.8).tickValues([1, 2, 3, 4.5,6,7,8,9]))
     .select(".domain").remove()
   // Customization
   svg.selectAll(".tick line").attr("stroke", "#b8b8b8")
@@ -33,11 +33,11 @@ d3.json("JS\Matches.json").then(function(data) {
       .attr("text-anchor", "end")
       .attr("x", width)
       .attr("y", height-30 )
-      .text("Time (year)");
+      .text("Match");
 
   // Add Y axis
   const y = d3.scaleLinear()
-    .domain([-100000, 100000])
+    .domain([-500, 500])
     .range([ height, 0 ]);
 
   // color palette
@@ -78,7 +78,7 @@ d3.json("JS\Matches.json").then(function(data) {
 
   // Area generator
   const area = d3.area()
-    .x(function(d) { return x(d.data.year); })
+    .x(function(d) { return x(d.data.Match); })
     .y0(function(d) { return y(d[0]); })
     .y1(function(d) { return y(d[1]); })
 
@@ -93,6 +93,5 @@ d3.json("JS\Matches.json").then(function(data) {
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)
-      
-//https://mocki.io/v1/060c75a0-3849-456f-8e0a-0f9a99607f97
+
 })
