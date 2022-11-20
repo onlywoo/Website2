@@ -1,17 +1,24 @@
-const data =[
-{name: 'Gibralta',  pickRate: 68.8},
-{name: 'Wattson',  pickRate: 30.0},
-{name: 'Crypto',  pickRate: 15.0},
-{name: 'Caustic',  pickRate: 58.8},
-{name: 'Loba',  pickRate: 0.0},
-{name: 'Horizon',  pickRate: 3.8},
-{name: 'Seer',  pickRate: 15.0},
-{name: 'Fuse',  pickRate: 2.5},
-{name: 'Valkyrie',  pickRate: 100.0},
-{name: 'Lifeline',  pickRate: 1.3},
-{name: 'Newcastle',  pickRate: 5.0}
-];
-
+//const data =[
+//{"name": 'Gibralta',  "pickRate": 68.8},
+//{"name": 'Wattson',  "pickRate": 30.0},
+//{"name": 'Crypto',  "pickRate": 15.0},
+//{"name": 'Caustic',  "pickRate": 58.8},
+//{"name": 'Loba',  "pickRate": 0.0},
+//{"name": 'Horizon',  "pickRate": 3.8},
+//{"name": 'Seer',  "pickRate": 15.0},
+//{"name": 'Fuse',  "pickRate": 2.5},
+//{"name": 'Valkyrie',  "pickRate": 100.0},
+//{"name": 'Lifeline',  "pickRate": 1.3},
+//{"name": 'Newcastle',  "pickRate": 5.0}
+//];
+//
+async function getData()
+{
+    const api_url = "https://mocki.io/v1/521ef1a9-407b-464a-8b66-2647e84789f6";
+    const api_data = await fetch(api_url);
+    const api_json = await api_data.json();
+    const data = api_json;
+    console.log(data);
 
 const width = 1200;
 const height = 450;
@@ -59,3 +66,5 @@ function xAxis(g) {
 svg.append("g").call(xAxis);
 svg.append("g").call(yAxis);
 svg.node();
+}
+getData();

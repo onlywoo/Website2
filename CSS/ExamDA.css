@@ -120,3 +120,34 @@ body {
     color: black;
     font-size: 2.5ch;
 }
+
+.buttons {
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.link a {
+    background-image: linear-gradient(to bottom right, #08051f, #a36e5e);
+    border: 0;
+    border-radius: .25rem;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.125rem;
+    /* 18px */
+    font-weight: 600;
+    line-height: 1.75rem;
+    /* 28px */
+    padding: 1rem 1.25rem;
+    text-align: center;
+    user-select: none;
+    font-size: 3ch;
+    text-decoration: none;
+    margin: 50px;
+}
+
+.link p {
+    color: white;
+    font-size: 2.5ch;
+}

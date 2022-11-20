@@ -1,17 +1,26 @@
 
-const stats =[
-    { id: "1",name: 'DarkZero',  TotalPoints: 70},
-    { id: "2",name: 'Furia',  TotalPoints: 85},
-    { id: "3",name: '100Thieves',  TotalPoints: 75},
-    { id: "4",name: 'Fnatic',  TotalPoints: 74},
-    { id: "5",name: 'GMT',  TotalPoints: 69},
-    { id: "6",name: 'SSG',  TotalPoints: 68},
-    { id: "7",name: 'TSM',  TotalPoints: 64},
-    { id: "8",name: 'Alliance',  TotalPoints: 61},
-    { id: "9",name: 'NRG',  TotalPoints: 55},
-    { id: "10",name: 'αD',  TotalPoints: 54},
-    { id: "11",name: 'SCARZ',  TotalPoints: 53}
-];
+//const stats =[
+//    { id: "1",name: 'DarkZero',  TotalPoints: 70},
+//    { id: "2",name: 'Furia',  TotalPoints: 85},
+//    { id: "3",name: '100Thieves',  TotalPoints: 75},
+//    { id: "4",name: 'Fnatic',  TotalPoints: 74},
+//    { id: "5",name: 'GMT',  TotalPoints: 69},
+//    { id: "6",name: 'SSG',  TotalPoints: 68},
+ //   { id: "7",name: 'TSM',  TotalPoints: 64},
+ //   { id: "8",name: 'Alliance',  TotalPoints: 61},
+ //   { id: "9",name: 'NRG',  TotalPoints: 55},
+ //   { id: "10",name: 'αD',  TotalPoints: 54},
+ //   { id: "11",name: 'SCARZ',  TotalPoints: 53}
+//];
+// 
+
+async function getData()
+{
+    const api_url = "https://mocki.io/v1/cdf62755-d387-485d-b160-3a2dbe54c3fa";
+    const api_data = await fetch(api_url);
+    const api_json = await api_data.json();
+    const stats = api_json;
+    console.log(data);
 
 let selected = stats;
 
@@ -111,3 +120,7 @@ teamsList.append('input')
     )
 render();
 })
+
+
+}
+getData()

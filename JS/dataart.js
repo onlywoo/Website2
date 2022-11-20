@@ -204,7 +204,7 @@ d3.json("https://raw.githubusercontent.com/onlywoo/datavis/main/csvjson.json", f
       .data(allgroups)
       .enter()
       .append("circle")
-        .attr("cx", 390)
+        .attr("cx", 600)
         .attr("cy", function(d,i){ return 10 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
         .attr("r", 7)
         .style("fill", function(d){ return myColor(d)})
@@ -216,7 +216,7 @@ d3.json("https://raw.githubusercontent.com/onlywoo/datavis/main/csvjson.json", f
       .data(allgroups)
       .enter()
       .append("text")
-        .attr("x", 390 + size*.8)
+        .attr("x", 600 + size*.8)
         .attr("y", function(d,i){ return i * (size + 5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
         .style("fill", function(d){ return myColor(d)})
         .text(function(d){ return d})
