@@ -89,21 +89,19 @@ button {
 .graph {
     position: absolute;
     display: inline-block;
-    margin-top: 15%;
-    margin-left: -20%;
+    margin-top: 10%;
+    margin-left: 20%;
     color: white;
 }
 
-#buttonXlim {
-    display: inline-block;
-    margin-top: 10%;
-    margin-left: 10%;
-    position: inherit;
+#svg {
+    color: white;
 }
 
 .bubbles {
-    stroke-width: 2px;
-    stroke: white;
+    stroke-width: 1px;
+    stroke: black;
+    opacity: .8
 }
 
 .bubbles:hover {

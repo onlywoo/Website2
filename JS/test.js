@@ -1,6 +1,6 @@
 const margin = {top: 20, right: 30, bottom: 0, left: 10},
-    width = 500 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 800 - margin.left - margin.right,
+    height = 800 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 const svg = d3.select("#my_dataviz")
@@ -12,18 +12,18 @@ const svg = d3.select("#my_dataviz")
           `translate(${margin.left}, ${margin.top})`);
 
 // Parse the Data
-d3.csv("https://raw.githubusercontent.com/onlywoo/datavis/main/data.csv").then(function(data) {
+d3.csv("https://raw.githubusercontent.com/onlywoo/datavis/main/Convert.csv").then(function(data) {
 
   // List of groups = header of the csv files
-  const keys = data.columns.slice(9)
+  const keys = data.columns.slice(1)
 
   // Add X axis
   const x = d3.scaleLinear()
-    .domain([0,9])
+  .domain(d3.extent(data, function(d) { return d.Match; }))
     .range([ 0, width ]);
   svg.append("g")
-    .attr("transform", `translate(0, ${height*0.8})`)
-    .call(d3.axisBottom(x).tickSize(-height*.8).tickValues([1, 2, 3, 4.5,6,7,8,9]))
+    .attr("transform", `translate(0, ${height*0.9})`)
+    .call(d3.axisBottom(x).tickSize(-height*.8).tickValues([1, 2, 3, 4.5,6,7,8,9,10]))
     .select(".domain").remove()
   // Customization
   svg.selectAll(".tick line").attr("stroke", "#b8b8b8")
