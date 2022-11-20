@@ -74,36 +74,49 @@ body {
     padding-bottom: 10px;
 }
 
-
-.buttons {
-    margin-left: 5%;
-    margin-top: 5%;
-}
-
-button {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-}
-
 .graph {
     position: absolute;
     display: inline-block;
     margin-top: 10%;
     margin-left: 20%;
-    color: white;
+    color: black;
 }
 
 #svg {
+    color: black;
+}
+
+.graph {
+    color: black;
+}
+
+#chart {
+
     color: white;
 }
 
-.bubbles {
-    stroke-width: 1px;
-    stroke: black;
-    opacity: .8
+#stats {
+    background-color: rgb(123, 123, 123);
+    padding: 20px;
+    border-radius: 15px 120px 15px 15px;
+    margin-right: 300px;
 }
 
-.bubbles:hover {
-    stroke: black;
+.heading {
+    color: white;
+
+}
+
+.heading h1 {
+    padding-bottom: 50px;
+    margin-top: -0px;
+    margin-bottom: 20px;
+    margin-left: 650px;
+    font-size: 5ch;
+
+}
+
+.text {
+    color: black;
+    font-size: 2.5ch;
 }

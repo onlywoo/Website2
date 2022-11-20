@@ -1,7 +1,8 @@
+
 // set the dimensions and margins of the graph
-const margin = {top: 40, right: 150, bottom: 60, left: 30},
-    width = 800 - margin.left - margin.right,
-    height = 420 - margin.top - margin.bottom;
+const margin = {top: 10, right: 30, bottom: 20, left: 50},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 const svg = d3.select("#Exam_dataviz")
@@ -11,204 +12,81 @@ const svg = d3.select("#Exam_dataviz")
   .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
-//Read the data
-d3.csv("https://raw.githubusercontent.com/onlywoo/datavis/main/secondTry.csv").then( function(data) {
+// Parse the Data
+d3.csv("https://raw.githubusercontent.com/onlywoo/datavis/main/omg.csv").then( function(data) {
 
-  // ---------------------------//
-  //       AXIS  AND SCALE      //
-  // ---------------------------//
+  // List of subgroups = header of the csv files = soil condition here
+  const subgroups = data.columns.slice(1)
+
+  // List of groups = species here = value of the first column called group -> I show them on the X axis
+  const matches = data.map(d => d.Match)
 
   // Add X axis
-  const x = d3.scaleLinear()
-    .domain([0, 200])
-    .range([ 0, width ]);
+  const x = d3.scaleBand()
+      .domain(matches)
+      .range([0, width])
+      .padding([0.2])
   svg.append("g")
     .attr("transform", `translate(0, ${height})`)
-    .call(d3.axisBottom(x).ticks(20));
-
-  // Add X axis label:
-  svg.append("text")
-      .attr("text-anchor", "end")
-      .attr("x", width)
-      .attr("y", height+50 )
-      .text("Gdp per Capita");
+    .call(d3.axisBottom(x).tickSizeOuter(0));
 
   // Add Y axis
   const y = d3.scaleLinear()
-    .domain([0, 20])
-    .range([ height, 0]);
+    .domain([0, 100])
+    .range([ height, 0 ]);
   svg.append("g")
     .call(d3.axisLeft(y));
 
-  // Add Y axis label:
-  svg.append("text")
-      .attr("text-anchor", "end")
-      .attr("x", 0)
-      .attr("y", -20 )
-      .text("Placement")
-      .attr("text-anchor", "start")
+  // color palette = one color per subgroup
+  const color = d3.scaleOrdinal()
+    .domain(subgroups)
+    .range(d3.schemeSet2);
 
-  // Add a scale for bubble size
-  const z = d3.scaleSqrt()
-    .domain([5, 200])
-    .range([ 2, 30]);
-
-  // Add a scale for bubble color
-  const myColor = d3.scaleOrdinal()
-    .domain(["Winner", "yes", "No"])
-    .range(d3.schemeSet1);
-
-
-  // ---------------------------//
-  //      TOOLTIP               //
-  // ---------------------------//
-
-  // -1- Create a tooltip div that is hidden by default:
-  const tooltip = d3.select("#Exam_dataviz")
-    .append("div")
-      .style("opacity", 0)
-      .attr("class", "tooltip")
-      .style("background-color", "black")
-      .style("border-radius", "5px")
-      .style("padding", "10px")
-      .style("color", "white")
-
-  // -2- Create 3 functions to show / update (when mouse move but stay on same circle) / hide the tooltip
-  const showTooltip = function(event,d) {
-    tooltip
-      .transition()
-      .duration(200)
-    tooltip
-      .style("opacity", 1)
-      .html("name: " + d.name)
-      .style("left", (event.x)/2 + "px")
-      .style("top", (event.y)/2-50 + "px")
-  }
-  const moveTooltip = function(event, d) {
-    tooltip
-      .style("left", (event.x)/2 + "px")
-      .style("top", (event.y)/2-50 + "px")
-  }
-  const hideTooltip = function(event, d) {
-    tooltip
-      .transition()
-      .duration(200)
-      .style("opacity", 0)
-  }
-
-
-  // ---------------------------//
-  //       HIGHLIGHT GROUP      //
-  // ---------------------------//
-
-  // What to do when one group is hovered
-  const highlight = function(event, d){
-    // reduce opacity of all groups
-    d3.selectAll(".bubbles").style("opacity", .05)
-    // expect the one that is hovered
-    d3.selectAll("."+d).style("opacity", 1)
-  }
-
-  // And when it is not hovered anymore
-  const noHighlight = function(event, d){
-    d3.selectAll(".bubbles").style("opacity", 1)
-  }
-
-
-  // ---------------------------//
-  //       CIRCLES              //
-  // ---------------------------//
-
-  // Add dots
-  svg.append('g')
-    .selectAll("dot")
-    .data(data)
-    .join("circle")
-      .attr("class", function(d) { return "bubbles " + d.MPoint })
-      .attr("cx", d => x(d.points))
-      .attr("cy", d => y(d.placement))
-      .attr("r", d => z(d.pop))
-      .style("fill", d => myColor(d.MPoint))
-    // -3- Trigger the functions for hover
-    .on("mouseover", showTooltip )
-    .on("mousemove", moveTooltip )
-    .on("mouseleave", hideTooltip )
+  //stack the data? --> stack per subgroup
+  const stackedData = d3.stack()
+    .keys(subgroups)
+    (data)
 
 
 
-    // ---------------------------//
-    //       LEGEND              //
-    // ---------------------------//
 
-    // Add legend: circles
-    const valuesToShow = [50, 100, 200]
-    const xCircle = 600
-    const xLabel = 650  
-    svg
-      .selectAll("legend")
-      .data(valuesToShow)
-      .join("circle")
-        .attr("cx", xCircle)
-        .attr("cy", d => height - 100 - z(d))
-        .attr("r", d => z(d))
-        .style("fill", "none")
-        .attr("stroke", "black")
+  // ----------------
+  // Highlight a specific subgroup when hovered
+  // ----------------
 
-    // Add legend: segments
-    svg
-      .selectAll("legend")
-      .data(valuesToShow)
-      .join("line")
-        .attr('x1', d => xCircle + z(d))
-        .attr('x2', xLabel)
-        .attr('y1', d => height - 100 - z(d))
-        .attr('y2', d => height - 100 - z(d))
-        .attr('stroke', 'black')
-        .style('stroke-dasharray', ('2,2'))
+  // Show the bars
+  svg.append("g")
+    .selectAll("g")
+    // Enter in the stack data = loop key per key = group per group
+    .data(stackedData)
+    .join("g")
+      .attr("fill", d => color(d.key))
+      .attr("class", d => "myRect " + d.key ) // Add a class to each subgroup: their name
+      .selectAll("rect")
+      // enter a second time = loop subgroup per subgroup to add all rectangles
+      .data(d => d)
+      .join("rect")
+        .attr("x", d => x(d.data.Match))
+        .attr("y", d => y(d[1]))
+        .attr("height", d => y(d[0]) - y(d[1]))
+        .attr("width",x.bandwidth())
+        .attr("stroke", "grey")
+        .on("mouseover", function (event,d) { // What happens when user hover a bar
 
-    // Add legend: labels
-    svg
-      .selectAll("legend")
-      .data(valuesToShow)
-      .join("text")
-        .attr('x', xLabel)
-        .attr('y', d => height - 100 - z(d))
-        .text( d => d/1)
-        .style("font-size", 10)
-        .attr('alignment-baseline', 'middle')
+          // what subgroup are we hovering?
+          const subGroupName = d3.select(this.parentNode).datum().key
 
-    // Legend title
-    svg.append("text")
-      .attr('x', xCircle)
-      .attr("y", height - 100 +30)
-      .text("Population (M)")
-      .attr("text-anchor", "middle")
+          // Reduce opacity of all rect to 0.2
+           d3.selectAll(".myRect").style("opacity", 0.2)
 
-    // Add one dot in the legend for each name.
-    const size = 20
-    const allgroups = ["Winner", "yes", "No"]
-    svg.selectAll("myrect")
-      .data(allgroups)
-      .join("circle")
-        .attr("cx", 600)
-        .attr("cy", (d,i) => 10 + i*(size+5)) // 100 is where the first dot appears. 25 is the distance between dots
-        .attr("r", 7)
-        .style("fill", d =>  myColor(d))
-        .on("mouseover", highlight)
-        .on("mouseleave", noHighlight)
+          // Highlight all rects of this subgroup with opacity 1. It is possible to select them since they have a specific class = their name.
+           d3.selectAll("."+subGroupName).style("opacity",1)
+        })
+        .on("mouseleave", function (event,d) { // When user do not hover anymore
 
-    // Add labels beside legend dots
-    svg.selectAll("mylabels")
-      .data(allgroups)
-      .enter()
-      .append("text")
-        .attr("x", 600 + size*.8)
-        .attr("y", (d,i) =>  i * (size + 5) + (size/2)) // 100 is where the first dot appears. 25 is the distance between dots
-        .style("fill", d => myColor(d))
-        .text(d => d)
-        .attr("text-anchor", "left")
-        .style("alignment-baseline", "middle")
-        .on("mouseover", highlight)
-        .on("mouseleave", noHighlight)
-  })
+          // Back to normal opacity: 1
+          d3.selectAll(".myRect")
+          .style("opacity",1)
+      })
 
+})

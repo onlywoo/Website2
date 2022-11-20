@@ -1,6 +1,6 @@
 const margin = {top: 20, right: 30, bottom: 0, left: 10},
-    width = 800 - margin.left - margin.right,
-    height = 800 - margin.top - margin.bottom;
+    width = 750 - margin.left - margin.right,
+    height = 750 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 const svg = d3.select("#my_dataviz")
@@ -26,24 +26,23 @@ d3.csv("https://raw.githubusercontent.com/onlywoo/datavis/main/Convert.csv").the
     .call(d3.axisBottom(x).tickSize(-height*.8).tickValues([1, 2, 3, 4.5,6,7,8,9,10]))
     .select(".domain").remove()
   // Customization
-  svg.selectAll(".tick line").attr("stroke", "#b8b8b8")
+  svg.selectAll(".tick line").attr("stroke", "black")
 
   // Add X axis label:
   svg.append("text")
       .attr("text-anchor", "end")
-      .attr("x", width)
+      .attr("x", width - 300)
       .attr("y", height-30 )
       .text("Match");
 
   // Add Y axis
   const y = d3.scaleLinear()
     .domain([-500, 500])
-    .range([ height, 0 ]);
-
+    .range([ 0, 650 ]);
   // color palette
   const color = d3.scaleOrdinal()
     .domain(keys)
-    .range(d3.schemeDark2);
+    .range(d3.schemePaired);
 
   //stack the data?
   const stackedData = d3.stack()
@@ -58,6 +57,7 @@ d3.csv("https://raw.githubusercontent.com/onlywoo/datavis/main/Convert.csv").the
     .attr("y", 0)
     .style("opacity", 0)
     .style("font-size", 17)
+
 
   // Three function that change the tooltip when user hover / move / leave a cell
   const mouseover = function(event,d) {
@@ -93,5 +93,8 @@ d3.csv("https://raw.githubusercontent.com/onlywoo/datavis/main/Convert.csv").the
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)
+      
 
+
+      
 })
