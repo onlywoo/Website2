@@ -1,3 +1,10 @@
+body {
+  display: grid;
+  height: 300ch;
+  background-image: linear-gradient(180deg, black, #87635a, #08051f);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .Apexlogo {
   float: left;
   margin-top: -10%;
@@ -40,12 +47,6 @@
   margin-bottom: 16%;
 }
 
-
-body {
-  height: 300ch;
-  background-image: linear-gradient(180deg, black, #87635a, #08051f);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 
 * {
   box-sizing: border-box;
@@ -229,8 +230,6 @@ body {
 }
 
 .suggestions {
-
-
   border-radius: 8%;
   float: right;
   margin: 1%;
@@ -245,14 +244,14 @@ body {
 }
 
 .suggestions h2 {
-  margin-top: -28.5%;
+  margin-top: 1%;
   margin-left: 5%;
-  position: absolute;
+  position: relative;
 
 }
 
 .suggestions h3 {
-  margin-top: -26%;
+  margin-top: -24%;
   margin-left: 5%;
 
 }
@@ -271,7 +270,7 @@ body {
   font-size: 3ch;
   color: white;
   margin-left: 45%;
-  margin-top: 40%;
+  margin-top: 30%;
   text-decoration: none;
   background-image: linear-gradient(to bottom right, #08051f, #a36e5e);
   border-radius: 15px 10px;
