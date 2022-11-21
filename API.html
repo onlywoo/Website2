@@ -20,15 +20,16 @@
         <button onclick="myFunction()" class="dropbtn">Menu</button>
         <div id="myDropdown" class="dropdown-content">
           <section id="home">
-            <a href="index.html" class="nav-links">Home</a>
 
-            <a href="Results.html" class="nav-links">Data Art</a>
-  
-            <a href="Statistics.html" class="nav-links">Data</a>
+            <a href="index.html" class="nav-links" aria-label="link to Homepage">Home</a>
 
-            <a href="blogs.html" class="nav-links">Blogs</a>
-
-            <a href="styleyGuid.html" class="nav-links">Style Guide</a>
+            <a href="Results.html" class="nav-links" aria-label="link to data art">Data Art</a>
+          
+            <a href="Statistics.html" class="nav-links" aria-label="link to data viz">Data visualisation</a>
+      
+            <a href="blogs.html" class="nav-links" aria-label="link to blogs">Blogs</a>
+      
+            <a href="styleyGuid.html" class="nav-links" aria-label="link to style Guide">Style Guide</a>
           </section>
         </div>
       </div>
@@ -37,9 +38,9 @@
       <h1>Interactive Data Visualization</h1>
       
     </div>
-    <div class="buttons">
+    <div class="buttons" aria-label="button to go to next graph">
       <div class="link"><p></p><a href="Statistics.html" class="nav-links">Stormpoint</a></div>
-      <div class="link"><a href="graph2.html" class="nav-links">Olympus</a></div>
+      <div class="link" aria-label="Button to go to interactive API graph" ><a href="graph2.html" class="nav-links">Olympus</a></div>
     </div>
  
     </div>
@@ -51,10 +52,10 @@
     </style>
   </head>
   <body>
-    <div class="graphHeading">
+    <div class="graphHeading" aria-label="Graph heading">
     <h1>ALGs Results</h1>
   </div>
-      <div class="graph">
+      <div class="graph" aria-label="Bar graph">
         <div id="stats"><div id="chart" >
           <svg></svg>
                   </div>
@@ -64,7 +65,7 @@
               </div>
            
               <script src="JS/stats.js"></script>
-              <div class="MP">
+              <div class="MP" aria-label="Text explaining bar graph">
                 <h1>While we see FURIA has the most points, DARKZERO is still the ALGS Championship winner. This is due to the Matchpoint format.</h1>
                   <p>"Match Point</p>
                 <p>The Pro League Regular Season, Playoffs, Championship, Last Chance Qualifier and Pro League Qualifier use the &ldquo;Match Point&rdquo; mechanic in the final round to determine the winners of these events. In this round, Teams compete in a series of matches, with Teams accumulating points in each match according to APPENDIX C5.1. Once a Team reaches fifty (50) points (&ldquo;Match Point Threshold&rdquo;) in this round, it is &ldquo;Match Point Eligible.&rdquo; Once a Team is Match Point Eligible, winning a match (placing first) after the match in which they reach the Match Point Threshold will result in them being declared winners of that tournament. Other Teams will be ranked according to their Round Score from this final round." <span>(Arts, 2022)</span></p>
