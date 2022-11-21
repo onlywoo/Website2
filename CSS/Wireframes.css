@@ -1,4 +1,4 @@
-html {
+body {
     scroll-behavior: smooth;
     background-image: linear-gradient(180deg, black, #87635a, #08051f);
     height: 350%;
@@ -90,4 +90,8 @@ a {
     margin: 15%;
     margin-top: 30%;
     font-size: 2.5ch;
+}
+
+.newSG p {
+    margin-bottom: -3%;
 }
