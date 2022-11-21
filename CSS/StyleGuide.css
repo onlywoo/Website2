@@ -1,12 +1,10 @@
-html {
+body {
   scroll-behavior: smooth;
-
-
   background-image: linear-gradient(180deg, black, #87635a, #08051f);
   height: 350%;
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+  margin-bottom: 10%;
 }
 
 .heading {
@@ -16,7 +14,7 @@ html {
 
 .heading h1 {
   padding-bottom: 50px;
-  margin-top: -0px;
+  margin-top: -10%;
   margin-bottom: 20px;
   margin-left: 650px;
   font-size: 5ch;

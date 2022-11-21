@@ -3,6 +3,7 @@ body {
   height: 300ch;
   background-image: linear-gradient(180deg, black, #87635a, #08051f);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 5%;
 }
 
 .Apexlogo {
@@ -29,7 +30,7 @@ body {
 .esports h1 {
   color: white;
   font-size: 3ch;
-  margin-top: -22%;
+  margin-top: -23.9%;
   margin-left: 3%;
 }
 
@@ -102,8 +103,6 @@ body {
   margin-top: 50px;
 }
 
-
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -139,20 +138,9 @@ body {
   display: block;
 }
 
-.navbar {
-
-  padding-right: 0px;
-  font-size: 18px;
-  background: black;
-  border: 1px solid rgba(159, 18, 18, 0.2);
-  padding-bottom: 10px;
-}
-
-
-
 
 .bg {
-  margin-top: 10%;
+  margin-top: 0-5%;
 }
 
 .about {
@@ -229,12 +217,17 @@ body {
 
 }
 
+.format h2 {
+  margin-top: -50%;
+}
+
 .suggestions {
   border-radius: 8%;
   float: right;
   margin: 1%;
   margin-right: 1%;
   padding: 5%;
+
 }
 
 .suggestions image {
@@ -247,11 +240,13 @@ body {
   margin-top: 1%;
   margin-left: 5%;
   position: relative;
+  margin-top: -32%;
+  margin-bottom: 5%;
 
 }
 
 .suggestions h3 {
-  margin-top: -24%;
+
   margin-left: 5%;
 
 }
@@ -263,14 +258,16 @@ body {
 .linkto p {
   font-size: 3ch;
   color: white;
-  margin-left: 7%;
+  margin-left: 8%;
+  margin-top: -5%;
+  margin-bottom: 3%;
 }
 
 .linkto a {
   font-size: 3ch;
   color: white;
   margin-left: 45%;
-  margin-top: 30%;
+  margin-top: 22%;
   text-decoration: none;
   background-image: linear-gradient(to bottom right, #08051f, #a36e5e);
   border-radius: 15px 10px;
